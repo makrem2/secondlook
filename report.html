@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SecondLook report</title><link rel="stylesheet" href="styles.css"></head>
+<body class="report">
+  <header class="brand"><span class="mark" aria-hidden="true"></span><div><h1>SecondLook</h1><p>Before you trust it, check it.</p></div></header>
+  <div class="cols">
+    <main id="report"></main>
+    <aside class="share" id="sharebox" hidden>
+      <h3>Share what you found</h3>
+      <p class="hint">Helps a friend or relative check the same thing. By default only the domain is shared, not the full link and not the page content.</p>
+      <textarea id="preview" rows="14" readonly></textarea>
+      <label class="check"><input type="checkbox" id="full"> Include the full link</label>
+      <div class="actions"><button id="copy" class="primary">Copy summary</button><button id="native" hidden>Share…</button></div>
+      <p id="status" role="status"></p>
+    </aside>
+  </div>
+  <script type="module" src="report.js"></script>
+</body></html>

@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="stylesheet" href="styles.css"></head>
+<body class="popup">
+  <header class="brand"><span class="mark" aria-hidden="true"></span><div><h1>SecondLook</h1><p>Before you trust it, check it.</p></div></header>
+  <main id="result" aria-live="polite"><p class="scanning">Looking at this page…</p></main>
+  <div class="actions"><button id="open" class="primary" hidden>Full report and share</button></div>
+  <section class="paste">
+    <label for="input">Got something suspicious elsewhere? Paste a link or message.</label>
+    <textarea id="input" rows="3" placeholder="Paste a link, email, job offer or text message"></textarea>
+    <button id="check">Check this</button>
+  </section>
+  <script type="module" src="popup.js"></script>
+</body></html>

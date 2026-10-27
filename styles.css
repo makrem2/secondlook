@@ -1,0 +1,43 @@
+:root{--bg:#f2f6f8;--card:#fff;--ink:#102a3a;--muted:#55697a;--line:#d8e2e8;--lens:#0b6e7a;
+--hi:#b42318;--hi-bg:#fde8e6;--md:#a15c00;--md-bg:#fdf0d8;--lo:#4d6a1f;--lo-bg:#eaf2d9;--ok:#0b6e7a;--ok-bg:#dff1f2;
+--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1b26;--card:#152736;--ink:#e6eef3;--muted:#98acba;--line:#274155;--lens:#5ec3cf;
+--hi:#ff9a8f;--hi-bg:#3d1a1a;--md:#ffc671;--md-bg:#3b2a0e;--lo:#b9d889;--lo-bg:#243214;--ok:#7fd6df;--ok-bg:#123a40}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 var(--sans)}
+body.popup{width:380px;padding:14px}
+body.report{max-width:1000px;margin:0 auto;padding:28px 20px}
+.brand{display:flex;gap:10px;align-items:center;margin-bottom:12px}
+.brand h1{font:600 20px var(--serif);margin:0;letter-spacing:.2px}.brand p{margin:0;color:var(--muted);font-size:12px}
+.mark{width:28px;height:28px;border-radius:50%;border:4px solid var(--lens);position:relative;flex:none}
+.mark::after{content:"";position:absolute;width:4px;height:12px;background:var(--lens);right:-7px;bottom:-9px;transform:rotate(-45deg);border-radius:2px}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:28px;align-items:start}
+@media (max-width:760px){.cols{grid-template-columns:1fr}}
+.verdict{border-radius:10px;padding:14px 16px;margin-bottom:14px;border-left:6px solid}
+.verdict .subject{margin:0;font-size:12px;color:var(--muted);overflow-wrap:anywhere}
+.verdict .label{font:600 26px/1.15 var(--serif);margin:2px 0 4px}.verdict .line{margin:0}
+.v-high{background:var(--hi-bg);border-color:var(--hi)}.v-high .label{color:var(--hi)}
+.v-caution{background:var(--md-bg);border-color:var(--md)}.v-caution .label{color:var(--md)}
+.v-low{background:var(--lo-bg);border-color:var(--lo)}.v-low .label{color:var(--lo)}
+.v-none{background:var(--ok-bg);border-color:var(--ok)}.v-none .label{color:var(--ok)}
+h3{font:600 15px var(--serif);margin:16px 0 6px}
+ul{margin:0;padding:0;list-style:none}
+.plain li{padding:3px 0 3px 16px;position:relative}.plain li::before{content:"";position:absolute;left:2px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--muted)}
+.finding{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left-width:4px}
+.finding p{margin:2px 0 4px;color:var(--muted)}
+.finding code{display:block;font:12px ui-monospace,Menlo,Consolas,monospace;background:var(--bg);padding:4px 6px;border-radius:4px;overflow-wrap:anywhere}
+.pill{font-size:11px;font-weight:600;padding:1px 7px;border-radius:99px;margin-right:8px}
+.s-high{border-left-color:var(--hi)}.s-high .pill{background:var(--hi-bg);color:var(--hi)}
+.s-medium{border-left-color:var(--md)}.s-medium .pill{background:var(--md-bg);color:var(--md)}
+.s-low{border-left-color:var(--lo)}.s-low .pill{background:var(--lo-bg);color:var(--lo)}
+.unknown{background:var(--card);border:1px dashed var(--line);border-radius:8px;padding:2px 12px 8px;margin-top:12px}
+button{font:600 13px var(--sans);padding:8px 14px;border-radius:8px;border:1px solid var(--lens);background:transparent;color:var(--lens);cursor:pointer}
+button.primary{background:var(--lens);color:var(--bg)}
+button:focus-visible,textarea:focus-visible{outline:3px solid var(--lens);outline-offset:2px}
+.actions{display:flex;gap:8px;margin:12px 0}.actions button{flex:1}
+.paste{border-top:1px solid var(--line);padding-top:12px;margin-top:6px}
+.paste label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px}
+textarea{width:100%;font:13px var(--sans);color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px;resize:vertical;margin-bottom:8px}
+.share{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:4px 16px 12px;position:sticky;top:16px}
+.hint,.check{font-size:12px;color:var(--muted)}#status{font-size:12px;color:var(--lens);min-height:18px;margin:0}
+.scanning{color:var(--muted)}
